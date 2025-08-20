@@ -25,8 +25,7 @@
       <h2>ẉ.ceo/dullnotdev</h2>
       <p>Hi👋 I'm DullNotDev.
       This is my payment website !</p>
-      <h3>My contact :
-      wa.me/6281234187519 | t.me/dullnotdev</h3>
+      <h3>My contact : t.me/dullnotdev</h3>
     </div>
 
     <!-- Tombol Pilih Payment -->
@@ -34,6 +33,7 @@
       <button class="pay-btn" onclick="showMethod('dana')">DANA</button>
       <button class="pay-btn" onclick="showMethod('ovo')">OVO</button>
       <button class="pay-btn" onclick="showMethod('gopay')">GOPAY</button>
+      <button class="pay-btn" onclick="showMethod('qris')">QRIS</button>
     </div>
 
     <!-- Detail pembayaran (awal tersembunyi) -->
@@ -51,9 +51,19 @@
 
     <div class="payment-method" id="gopay" style="display:none;">
       <h3>GOPAY</h3>
-      <div class="number-box" id="gopay-number">081234187519</div>
+      <div class="number-box" id="gopay-number">I Dont Have Gopay !</div>
       <button class="copy-btn" onclick="copyText('gopay-number')">Salin Nomor Gopay</button>
     </div>
+
+<div class="payment-method" id="qris" style="display:none; text-align:center;">
+  <h3>QRIS</h3>
+  <div class="number-box">Scan QRIS di bawah ini:</div>
+  <img src="https://autoresbot.com/tmp_files/b8093ddd-5790-48c0-88b3-ff592a27b62f.jpg" 
+       alt="QRIS" 
+       style="width:200px; margin-top:10px; border:1px solid #fff; border-radius:10px;">
+  <p style="margin-top:10px;">Gunakan aplikasi pembayaran yang mendukung QRIS.</p>
+</div>
+
 
     <div class="footer-note">
       Kirim bukti transfer ke WhatsApp/Telegram untuk konfirmasi.
@@ -65,7 +75,7 @@
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
 
-      if (user === "admin" && pass === "1234") {
+      if (user === "1" && pass === "1") {
         document.getElementById("login-page").style.display = "none";
         document.getElementById("payment-page").style.display = "block";
       } else {
