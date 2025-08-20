@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Efek hologram shimmer tenang */
+.hologram {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(255,0,255,0.05), rgba(255,255,255,0.03));
+  background-size: 400% 400%;
+  animation: shimmer 60s ease infinite;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4CAF50;
+  box-shadow: 0 0 15px #4CAF50;
+}
+
+.profile h2 {
+  margin: 15px 0 5px;
+}
+
+.profile p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.payment-method {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-method h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #7fffd4;
+}
+
+.number-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  word-break: break-word;
+  color: #fff;
+}
+
+button.copy-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+button.copy-btn:hover {
+  background-color: #45a049;
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 25px;
+}
